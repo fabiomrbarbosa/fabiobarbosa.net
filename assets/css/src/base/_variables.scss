@@ -1,0 +1,81 @@
+/*
+ * Typography variables.
+ */
+$body-font-family: "EB Garamond", Georgia, "Times New Roman", Times, serif;
+$alt-font-family: "Gothic A1", aktiv-grotesk, Helvetica Neue, -apple-system,
+	BlinkMacSystemFont, Segoe UI, Roboto, Arial, Noto Sans, sans-serif,
+	Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+$base-font-size: 16 !default; // in pixels. This would result in 22px on desktop
+$base-line-height: 1.2 !default; // how large the line height is as a multiple of font size
+$leading: $base-line-height * 1rem !default;
+$scale: 1.185 !default; // smaller than leading for tighter headings.
+
+/*
+ * Layout variables.
+ */
+
+$padding: $leading !default;
+$max-width: 1120px !default;
+$content-margin: 50% !default;
+$gutter: 3vw !default;
+
+/*
+ * Media query variables.
+ */
+
+$phone-width: 37.5em !default; // 600px
+$tablet-portrait: 48.875em !default; // 782px
+$tablet-landscape: 60em !default; // 960px
+$desktop-width: 64em !default; // 1024px
+
+@mixin only-phone {
+	@media (max-width: #{$phone-width}) {
+		@content;
+	}
+}
+
+@mixin from-phone {
+	@media (min-width: #{$phone-width}) {
+		@content;
+	}
+}
+
+@mixin from-tablet {
+	@media (min-width: #{$tablet-portrait}) {
+		@content;
+	}
+}
+
+@mixin from-tablet-landscape {
+	@media (min-width: #{$tablet-landscape}) {
+		@content;
+	}
+}
+
+@mixin from-desktop {
+	@media (min-width: #{$desktop-width}) {
+		@content;
+	}
+}
+
+/*
+ * Color variables.
+ * CSS variables are preferred here.
+ */
+
+:root {
+	--color-black: #000;
+	--color-dark-grey: #a5a6a9;
+	--color-grey: #dfe0e2;
+	--color-light-grey: #fbfbfb; // :)
+	--color-white: #ffffff;
+
+	--color-red: #f43530;
+	--color-cyan: #00b8b8;
+
+	--color-background: var(--color-black);
+	--color-background-alt: var(--color-dark-grey);
+	--color-content: var(--color-white);
+	--color-content-alt: var(--color-light-grey);
+	--color-link: var(--color-cyan);
+}

@@ -1,0 +1,80 @@
+body {
+  color: var(--color-white);
+  background-color: var(--color-black);
+
+  @include from-tablet {
+    padding: $padding $gutter;
+  }
+}
+
+::selection {
+  background-color: var(--color-dark-grey);
+}
+
+// No, we cannot combine placeholder selectors. BUG
+::-webkit-input-placeholder {
+    color: var(--color-white);
+}
+
+::-moz-placeholder {
+    color: var(--color-white);
+}
+
+::-ms-placeholder {
+    color: var(--color-white);
+}
+
+::placeholder {
+    color: var(--color-white);
+}
+
+h3 {
+  @extend .actionable;
+}
+
+a {
+  text-decoration: none;
+
+  &:not(.site-logo) {
+    @extend .understrike;
+    font-weight: bold;
+    font-size: 0.8em; // to account for different x-heights
+    font-family: $alt-font-family;
+    color: var(--color-content);
+  }
+}
+
+nav a {
+  font-weight: normal !important;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+figure {
+  margin-top: $leading;
+  margin-bottom: 0;
+}
+
+blockquote {
+  font-family: $alt-font-family;
+  border-left: 0.5rem solid var(--color-red);
+  padding-left: $gutter;
+  margin: 0;
+}
+
+cite {
+  @extend .delta;
+  position: relative;
+  padding-left: 1rem;
+
+  &:before {
+    position: absolute;
+    content: "— ";
+    left: 0;
+    top: 0.1rem;
+    line-height: 0.5rem;
+  }
+}

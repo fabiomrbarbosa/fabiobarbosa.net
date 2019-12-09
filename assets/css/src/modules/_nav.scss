@@ -1,0 +1,50 @@
+nav {
+  @include from-tablet {
+    display: flex;
+    flex-direction: column;
+
+    position: fixed;
+    top: $padding;
+    left: $gutter;
+
+    z-index: 10;
+
+    a {
+      display: block;
+      transition: color .5s ease-out;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      width: 1px;
+      z-index: -3;
+      background-color: var(--color-content);
+    }
+  }
+}
+
+.site-logo {
+  display: block;
+  width: 12vw;
+  max-width: 76px;
+  padding-bottom: 1rem;
+
+  svg path {
+    fill: var(--color-white);
+    transition: fill .5s ease-out;
+  }
+}
+
+.fg-black {
+  nav a {
+    color: var(--color-black);
+  }
+
+  .site-logo svg path {
+    fill: var(--color-black);
+  }
+}

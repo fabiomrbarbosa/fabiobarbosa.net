@@ -1,0 +1,74 @@
+.button,
+button,
+input,
+select,
+textarea {
+  display: block;
+  color: var(--color-content);
+  font-family: $alt-font-family;
+  font-size: $base-font-size / 16 * 55%;
+  line-height: $leading;
+  padding: 0 $leading / 3;
+  width: 100%;
+}
+
+.button,
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  background: transparent;
+  color: var(--color-content);
+  border: 2px solid var(--color-content);
+  font-variant: small-caps;
+  font-weight: bold;
+  text-transform: lowercase;
+  letter-spacing: 0.1rem;
+  box-shadow: 4px 4px 0 var(--color-content);
+  transform: translate(0, 0);
+  cursor: pointer;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: var(--color-content);
+    color: var(--color-background);
+  }
+}
+
+label {
+  @extend .actionable;
+}
+input,
+textarea {
+  background: transparent;
+  border: none;
+  margin-bottom: 1rem;
+  border-right: 1px solid var(--color-content);
+  border-bottom: 1px solid var(--color-content);
+
+  &:required {
+    background-image: url("../../img/dist/form-required.svg");
+    background-repeat: no-repeat;
+    background-size: 0.4rem auto;
+    background-position: 0% 0.2rem;
+  }
+}
+
+.signup {
+  @include from-tablet {
+    grid-column: 2/4;
+  }
+}
+
+.signup-form {
+  @include from-phone {
+    display: flex;
+    margin-bottom: -1rem; // to compensate for the input's margins
+
+    .button {
+      width: 45%;
+      margin-left: 1rem;
+    }
+  }
+}

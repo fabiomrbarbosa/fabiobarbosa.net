@@ -1,0 +1,16 @@
+.container {
+    padding: $padding $gutter;
+}
+
+header,
+section {
+    @include from-tablet {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: $gutter;
+    }
+
+    @include from-desktop {
+        padding-left: 15vw;
+    }
+}

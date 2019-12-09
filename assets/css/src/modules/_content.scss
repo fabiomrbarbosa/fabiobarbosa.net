@@ -1,0 +1,117 @@
+.title {
+  padding-top: $padding;
+}
+
+.content {
+  @include from-tablet {
+    grid-column: 2/4;
+  }
+}
+
+.skills,
+.shapes {
+  @include from-tablet {
+    grid-column: 2/4;
+  }
+  @include from-desktop {
+    grid-column: 1/2;
+    grid-row-start: 1;
+  }
+}
+
+.skills {
+  @extend .metatext;
+  margin: $padding 0;
+
+  ul,
+  ol {
+    margin: 0;
+    padding-left: 0.5rem;
+    columns: 2;
+    column-gap: $gutter;
+
+    @include from-desktop {
+      columns: 1;
+    }
+  }
+}
+
+.brands {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  @include from-tablet {
+    margin-left: -15vw;
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  @include from-desktop {
+    margin-left: -26vw;
+  }
+}
+
+.brand-logo:nth-child(odd) {
+  background-color: var(--color-grey);
+}
+
+#work {
+  background-color: var(--color-light-grey);
+  color: var(--color-black);
+
+  a {
+    color: var(--color-black);
+  }
+}
+
+#about {
+  background-color: var(--color-grey);
+  color: var(--color-black);
+}
+
+#contact {
+  background-color: var(--color-red);
+
+  @include from-desktop {
+    .content {
+      grid-column: 1/2;
+    }
+
+    .content + .content {
+      grid-column: 2/4;
+      padding-left: 0;
+    }
+  }
+
+  p {
+    margin: $leading * 0.5 0;
+  }
+
+  .emailaddress {
+    margin-top: $leading * 0.5;
+    margin-bottom: $leading;
+    display: block;
+
+    a {
+      font-size: 2rem;
+      line-height: $base-line-height;
+    }
+  }
+}
+
+.shapes {
+  img {
+    mix-blend-mode: multiply;
+
+    &:first-child {
+      margin-top: $padding;
+      margin-bottom: -50%;
+    }
+
+    & + img {
+      @include from-tablet {
+        position: sticky;
+        top: $padding;
+      }
+    }
+  }
+}

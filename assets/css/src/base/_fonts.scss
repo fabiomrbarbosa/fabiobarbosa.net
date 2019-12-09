@@ -1,0 +1,54 @@
+/* eb-garamond-regular - latin */
+@font-face {
+    font-family: "EB Garamond";
+    font-style: normal;
+    font-weight: 400;
+    src: local("EB Garamond Regular"), local("EBGaramond-Regular"),
+        url("../../fonts/eb-garamond-v11-latin-regular.woff2") format("woff2"),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+            url("../../fonts/eb-garamond-v11-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* eb-garamond-italic - latin */
+@font-face {
+    font-family: "EB Garamond";
+    font-style: italic;
+    font-weight: 400;
+    src: local("EB Garamond Italic"), local("EBGaramond-Italic"),
+        url("../../fonts/eb-garamond-v11-latin-italic.woff2") format("woff2"),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+            url("../../fonts/eb-garamond-v11-latin-italic.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* eb-garamond-700 - latin */
+@font-face {
+    font-family: "EB Garamond";
+    font-style: normal;
+    font-weight: 700;
+    src: local("EB Garamond Bold"), local("EBGaramond-Bold"),
+        url("../../fonts/eb-garamond-v11-latin-700.woff2") format("woff2"),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+            url("../../fonts/eb-garamond-v11-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* gothic-a1-regular - latin */
+@font-face {
+    font-family: "Gothic A1";
+    font-style: normal;
+    font-weight: 400;
+    src: local("Gothic A1 Regular"), local("GothicA1-Regular"),
+        url("../../fonts/gothic-a1-v8-latin-regular.woff2") format("woff2"),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+            url("../../fonts/gothic-a1-v8-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* gothic-a1-900 - latin */
+@font-face {
+    font-family: "Gothic A1";
+    font-style: normal;
+    font-weight: 700;
+    src: local("Gothic A1 Black"), local("GothicA1-Black"),
+        url("../../fonts/gothic-a1-v8-latin-900.woff2") format("woff2"),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+            url("../../fonts/gothic-a1-v8-latin-900.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}

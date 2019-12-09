@@ -1,0 +1,55 @@
+header {
+  position: relative;
+}
+.bg {
+  position: absolute;
+  margin: 0 $gutter;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -2;
+
+  @include from-tablet {
+    left: 33.3vw;
+  }
+
+  img {
+    position: absolute;
+    mix-blend-mode: multiply;
+
+    &:first-child {
+      top: 30vh;
+      z-index: -1;
+      animation: slide-up 10s ease-in-out infinite alternate both;
+    }
+    & + img {
+      bottom: 30vh;
+      animation: slide-down 10s ease-in-out infinite alternate both;
+    }
+  }
+}
+
+h1 {
+  @include from-tablet {
+    grid-column: 2/4;
+  }
+  @include from-desktop {
+    max-width: 33rem;
+    padding-top: $padding * 3;
+  }
+}
+
+.signature {
+  display: inline-block;
+  height: 2 * $leading; // same as h1's line-height
+  width: 13rem; // magic number
+  margin-left: -1.75rem; // magic number
+  position: relative;
+  vertical-align: bottom;
+
+  img {
+    position: absolute;
+    top: 5%; // magic number
+  }
+}
