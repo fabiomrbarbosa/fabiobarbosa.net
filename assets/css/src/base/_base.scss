@@ -13,19 +13,27 @@ body {
 
 // No, we cannot combine placeholder selectors. BUG
 ::-webkit-input-placeholder {
-    color: var(--color-white);
+  color: var(--color-white);
+  font-size: 0.6rem;
+  opacity: 1;
 }
 
 ::-moz-placeholder {
-    color: var(--color-white);
+  color: var(--color-white);
+  font-size: 0.6rem;
+  opacity: 1;
 }
 
 ::-ms-placeholder {
-    color: var(--color-white);
+  color: var(--color-white);
+  font-size: 0.6rem;
+  opacity: 1;
 }
 
 ::placeholder {
-    color: var(--color-white);
+  color: var(--color-white);
+  font-size: 0.6rem;
+  opacity: 1;
 }
 
 h3 {
