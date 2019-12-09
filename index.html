@@ -173,18 +173,18 @@
                     <p>I promise to reply within 24 hours. Your time is precious. I get that. Required fields are highlighted with an asterisk.</p>
 
                     <div class="kwes-form">
-                        <form method="POST" action="https://kwes.io/api/foreign/forms/mxIvB3D7nZiMSWfB7tMY">
-                            <label for="form-name">Your name</label>
-                            <input id="form-name" name="name" type="text" rules="required|max:255" placeholder="You may use your superhero name, but should you?">
+                        <form method="POST" netlify>
+                            <label for="form-name">Your name
+                            <input id="form-name" name="name" type="text" required placeholder="You may use your superhero name, but should you?">
 
                             <label for="form-replyto">Your e-mail address</label>
-                            <input id="form-replyto" name="_replyto" type="email" rules="required|email" placeholder="Yes, I'm fine even with Hotmail and AOL.">
+                            <input id="form-replyto" name="_replyto" type="email" required placeholder="Yes, I'm fine even with Hotmail and AOL.">
 
                             <label for="form-phone">Your phone number</label>
                             <input id="form-phone" name="telephone" placeholder="Don't forget your country's international prefix!" type="tel">
 
                             <label for="form-message">Your message</label>
-                            <textarea id="form-message" rules="required" placeholder="Type your message here…" name="message"></textarea>
+                            <textarea id="form-message" required placeholder="Type your message here…" name="message"></textarea>
 
                             <button type="submit" id="contact-submit" data-submit="…Sending">Submit</button>
                         </form>
@@ -204,7 +204,6 @@
 
     <script src="./assets/js/dist/jquery.min.js"></script>
     <script src="./assets/js/dist/scripts.min.js"></script>
-    <script src="https://kwes.io/js/kwes.js"></script>
 </body>
 
 </html>
