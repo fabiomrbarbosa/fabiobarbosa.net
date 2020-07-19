@@ -15,12 +15,13 @@ var sass = require("gulp-sass");
 var postcss = require("gulp-postcss");
 var cssnano = require('cssnano');
 var mqpacker = require('css-mqpacker');
-var gradients = require('postcss-easing-gradients');
 var autoprefixer = require("autoprefixer");
 var concat = require("gulp-concat");
 var babel = require("gulp-babel");
 var terser = require("gulp-terser");
 var browserSync = require("browser-sync").create();
+
+sass.compiler = require('node-sass');
 
 // tasks
 gulp.task("img", function() {
@@ -45,7 +46,6 @@ gulp.task("css", function() {
   var postCssOpts = [
     autoprefixer,
     cssnano,
-    gradients
   ];
 
   return gulp.src(dir.assets + "css/" + dir.src + "**/*.scss")
